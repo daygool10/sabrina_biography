@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina Carpenter - Página Acessível</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Sabrina Carpenter</h1>
+        <div id="accessibility-tools">
+            <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO / BIOGRAFIA -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Quem é Sabrina Carpenter?</h2>
+                <p>
+                    Sabrina Annlynn Carpenter nasceu em <strong>11 de maio de 1999</strong>, em Quakertown, Pensilvânia
+                    (EUA).
+                    Ela é uma cantora, compositora e atriz que conquistou o mundo com seu talento único e carisma
+                    inconfundível.
+                </p>
+                <p>
+                    Sabrina começou sua carreira ainda criança, participando de produções da Disney, como <em>Girl Meets
+                        World</em>
+                    (onde interpretou Maya Hart) e <em>Adventures in Babysitting</em>. Mas foi na música que ela
+                    realmente
+                    encontrou sua voz.
+                </p>
+                <p>
+                    Com álbuns aclamados como <em>Emails I Can't Send</em> (2022), <em>Short n' Sweet</em> (2024) e hits
+                    como
+                    <em>Espresso</em>, <em>Nonsense</em> e <em>Please Please Please</em>, Sabrina se consolidou como uma
+                    das
+                    artistas pop mais importantes da sua geração. Seu estilo mistura humor, vulnerabilidade e uma
+                    estética
+                    retrô-divertida que encanta fãs de todas as idades.
+                </p>
+                <p>
+                    Além da música, Sabrina também é conhecida por seu carisma nos palcos, sua moda icônica e por ser
+                    uma
+                    excelente compositora — ela co-escreve quase todas as suas músicas.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CARROSSEL DE FOTOS -->
+        <section class="carousel-section">
+            <h2>📸 Galeria de Fotos</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide current-slide">
+                            <img src="img/sabrina/1.jpg"
+                                alt="Sabrina Carpenter - Foto 1"
+                                onerror="this.src='https://via.placeholder.com/600x400/FFB6C1/ffffff?text=Sabrina+Carpenter+1'">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="img/sabrina/2.jpg"
+                                alt="Sabrina Carpenter - Foto 2"
+                                onerror="this.src='https://via.placeholder.com/600x400/DDA0DD/ffffff?text=Sabrina+Carpenter+2'">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="img/sabrina/3.jpg"
+                                alt="Sabrina Carpenter - Foto 3"
+                                onerror="this.src='https://via.placeholder.com/600x400/FFDAB9/ffffff?text=Sabrina+Carpenter+3'">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="img/sabrina/4.jpg"
+                                alt="Sabrina Carpenter - Foto 4"
+                                onerror="this.src='https://via.placeholder.com/600x400/E6E6FA/ffffff?text=Sabrina+Carpenter+4'">
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-indicator current-indicator" onclick="currentSlide(0)"></button>
+                <button class="carousel-indicator" onclick="currentSlide(1)"></button>
+                <button class="carousel-indicator" onclick="currentSlide(2)"></button>
+                <button class="carousel-indicator" onclick="currentSlide(3)"></button>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CAPAS DE ÁLBUNS -->
+        <section class="albums-section">
+            <h2>💿 Discografia em Destaque</h2>
+            <div class="albums-grid">
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="img/albuns/emails.jpg"
+                            alt="Capa do álbum Emails I Can't Send"
+                            onerror="this.src='https://via.placeholder.com/300x300/FFB6C1/ffffff?text=Emails+I+Cant+Send'">
+                    </div>
+                    <h3>Emails I Can't Send</h3>
+                    <p class="album-year">2022</p>
+                    <p class="album-desc">Álbum que marcou a transição de Sabrina para uma maturidade artística, com
+                        hits como "Nonsense" e "Because I Liked a Boy".</p>
+                </div>
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="img/albuns/short.jpg"
+                            alt="Capa do álbum Short n' Sweet"
+                            onerror="this.src='https://via.placeholder.com/300x300/DDA0DD/ffffff?text=Short+n+Sweet'">
+                    </div>
+                    <h3>Short n' Sweet</h3>
+                    <p class="album-year">2024</p>
+                    <p class="album-desc">O álbum que a levou ao topo das paradas mundiais com "Espresso", "Please
+                        Please Please" e "Taste".</p>
+                </div>
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="img/albuns/singular.jpg"
+                            alt="Capa do álbum Singular: Act I"
+                            onerror="this.src='https://via.placeholder.com/300x300/FFDAB9/ffffff?text=Singular+Act+I'">
+                    </div>
+                    <h3>Singular: Act I</h3>
+                    <p class="album-year">2018</p>
+                    <p class="album-desc">Um marco em sua carreira pop, com faixas como "Sue Me" e "Almost Love".</p>
+                </div>
+                <div class="album-card">
+                    <div class="album-cover">
+                        <img src="img/albuns/evolution.jpg"
+                            alt="Capa do álbum Evolution"
+                            onerror="this.src='https://via.placeholder.com/300x300/E6E6FA/ffffff?text=Evolution'">
+                    </div>
+                    <h3>Evolution</h3>
+                    <p class="album-year">2016</p>
+                    <p class="album-desc">Seu segundo álbum de estúdio, com uma sonoridade mais madura e faixas como "On
+                        Purpose".</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site feito com 💖 para fãs da Sabrina Carpenter | Página acessível com VLibras</p>
+    </footer>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

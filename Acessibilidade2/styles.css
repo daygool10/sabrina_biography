@@ -1,0 +1,340 @@
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #4a2c3a;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 50%, #ffd9e6 100%);
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ff8fab 0%, #ff69b4 100%);
+    padding: 15px 30px;
+    border-bottom: 3px solid #ff4d88;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(199, 21, 133, 0.4);
+    letter-spacing: 1px;
+}
+
+#accessibility-tools button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#accessibility-tools button:hover {
+    background-color: #0056b3;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* ===== SEÇÃO HERO / BIOGRAFIA ===== */
+.hero {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.25);
+    border: 1px solid rgba(255, 182, 193, 0.6);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.hero h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8fab, #ff69b4);
+    border-radius: 2px;
+}
+
+.hero p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #5c3348;
+    text-align: justify;
+}
+
+.hero strong {
+    color: #d63384;
+}
+
+.hero em {
+    color: #e75480;
+    font-style: italic;
+}
+
+/* ===== SEÇÃO CARROSSEL ===== */
+.carousel-section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.carousel-section h2 {
+    font-size: 1.8rem;
+    color: #d63384;
+    margin-bottom: 25px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    list-style: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    color: #d63384;
+    box-shadow: 0 4px 10px rgba(199, 21, 133, 0.25);
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #ff69b4;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ff69b4;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.current-indicator {
+    background: #d63384;
+    border-color: #d63384;
+    transform: scale(1.2);
+}
+
+/* ===== SEÇÃO ÁLBUNS ===== */
+.albums-section {
+    margin-bottom: 40px;
+}
+
+.albums-section h2 {
+    font-size: 1.8rem;
+    color: #d63384;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.album-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 182, 193, 0.5);
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.4);
+}
+
+.album-cover img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(199, 21, 133, 0.2);
+}
+
+.album-card h3 {
+    font-size: 1.15rem;
+    color: #c2185b;
+    margin-bottom: 5px;
+}
+
+.album-year {
+    font-size: 0.9rem;
+    color: #e75480;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.album-desc {
+    font-size: 0.88rem;
+    color: #6d4355;
+    line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(90deg, #ff8fab 0%, #ff69b4 100%);
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(199, 21, 133, 0.3);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-slide img {
+        height: 280px;
+    }
+
+    .albums-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+
+    .album-cover img {
+        height: 160px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        height: 220px;
+    }
+
+    .albums-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .album-card {
+        padding: 12px;
+    }
+
+    .album-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .album-desc {
+        font-size: 0.78rem;
+    }
+}
